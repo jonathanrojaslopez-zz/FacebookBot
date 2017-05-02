@@ -91,9 +91,12 @@ function receivedMessage(event) {
       case 'generic':
         sendGenericMessage(senderID);
         break;
-       case 'dime una verdad absoluta ?':
-	       sendChichiMessage(senderID, messageText);
-	       break;
+	    case 'dime una verdad absoluta ?':
+	      sendChichiMessage(senderID, messageText);
+	      break;
+	    case 'y que tan gay es ?':
+	      sendTextMessage(senderID, 'el mas gay de todos');
+	      break;
       default:
         sendTextMessage(senderID, messageText);
     }
