@@ -91,7 +91,7 @@ function receivedMessage(event) {
       case 'generic':
         sendGenericMessage(senderID);
         break;
-       case 'dime algo ?':
+       case 'dime una verdad absoluta ?':
 	       sendChichiMessage(senderID, messageText);
 	       break;
       default:
@@ -112,7 +112,7 @@ function sendChichiMessage(recipientId, messageText) {
       id: recipientId
     },
     message: {
-      text: 'chichico es el mas gay del'
+      text: 'chichico es el mas gay del Mundo'
     }
   };
 
