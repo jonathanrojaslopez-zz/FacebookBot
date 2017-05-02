@@ -1,5 +1,11 @@
-var express = require('express');
+const express = require('express');
+const bodyParser = require('body-parser')
+const request = require('request')
+
+const APP_TOKEN = 'EAAE5Conk9RIBACScJxlkkUmJtWZCgfjGEBJz4i7pIPk43giHUZANKduz2oqHKAGTAC7I1Na42wpzkybYmxE7rIdPDC7405793MwBD8e1TtSf2YqLWvDtJBVtZChnkB29kGhZBrRFiQUqNZCVAKtt5A8Xxgi4ZCZARTKAx9tMV9PHgZDZD'
+
 var app = express();
+app.use(bodyParser.json())
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -30,5 +36,7 @@ app.get('/webhook', function(req, res) {
 });
 
 app.post('/webhook',function (req,res) {
+	var data = req.body;
+	console.log(data);
 	res.sendStatus(200)
 })
