@@ -92,8 +92,8 @@ function receivedMessage(event) {
         sendGenericMessage(senderID);
         break;
        case 'dime algo ?':
-       'chichico es el mas gay del mundo';
-       break;
+	       sendChichiMessage(senderID, messageText);
+	       break;
       default:
         sendTextMessage(senderID, messageText);
     }
@@ -104,6 +104,19 @@ function receivedMessage(event) {
 
 function sendGenericMessage(recipientId, messageText) {
   // To be expanded in later sections
+}
+
+function sendChichiMessage(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      text: 'chichico es el mas gay del'
+    }
+  };
+
+  callSendAPI(messageData);
 }
 
 function sendTextMessage(recipientId, messageText) {
