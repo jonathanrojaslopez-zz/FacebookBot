@@ -91,7 +91,9 @@ function receivedMessage(event) {
       case 'generic':
         sendGenericMessage(senderID);
         break;
-
+       case 'dime algo ?':
+       'chichico es el mas gay del mundo';
+       break;
       default:
         sendTextMessage(senderID, messageText);
     }
