@@ -91,6 +91,9 @@ function receivedMessage(event) {
       case 'generic':
         sendGenericMessage(senderID);
         break;
+	    case 'muestramelo':
+        sendGenericMessage(senderID);
+        break;
 	    case 'dime una verdad absoluta ?':
 	      sendChichiMessage(senderID, messageText);
 	      break;
@@ -116,17 +119,17 @@ function sendGenericMessage(recipientId, messageText) {
         payload: {
           template_type: "generic",
           elements: [{
-            title: "rift",
-            subtitle: "Next-generation virtual reality",
-            item_url: "https://www.oculus.com/en-us/rift/",
+            title: "Andres Cardenas",
+            subtitle: "gay man",
+            item_url: "",
             image_url: "https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/10888859_10203568739881141_4606943456520933747_n.jpg?oh=97bfef478a0ba16f92df2861171f4ece&oe=5981ECF7",
             buttons: [{
               type: "web_url",
               url: "https://www.oculus.com/en-us/rift/",
-              title: "Open Web URL"
+              title: "Open Porn Site"
             }, {
               type: "postback",
-              title: "Call Postback",
+              title: "Call Him",
               payload: "Payload for first bubble",
             }],
           }, {
