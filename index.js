@@ -116,13 +116,13 @@ function sendGenericMessage(recipientId, messageText) {
         payload: {
           template_type: "generic",
           elements: [{
-            title: "rift",
+            title: "Andres Cardenas",
             subtitle: "Next-generation virtual reality",
             item_url: "https://www.oculus.com/en-us/rift/",
             image_url: "http://messengerdemo.parseapp.com/img/rift.png",
             buttons: [{
               type: "web_url",
-              url: "https://www.oculus.com/en-us/rift/",
+              url: "https://www.facebook.com/photo.php?fbid=10203568739881141&set=a.1414838613028.2058455.1294458767&type=3&theater",
               title: "Open Web URL"
             }, {
               type: "postback",
