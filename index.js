@@ -91,14 +91,14 @@ function receivedMessage(event) {
       case 'generic':
         sendGenericMessage(senderID);
         break;
-	    case 'muestramelo':
+	    case 'string 1':
         sendGenericMessage(senderID);
         break;
-	    case 'dime una verdad absoluta ?':
-	      sendChichiMessage(senderID, messageText);
+	    case 'string 2':
+	      sendTextMessage(senderID, 'message Response ');
 	      break;
-	    case 'y que tan gay es ?':
-	      sendTextMessage(senderID, 'el mas gay de todos');
+	    case 'string 3':
+	      sendTextMessage(senderID, 'message Response');
 	      break;
       default:
         sendTextMessage(senderID, messageText);
@@ -119,10 +119,10 @@ function sendGenericMessage(recipientId, messageText) {
         payload: {
           template_type: "generic",
           elements: [{
-            title: "Andres Cardenas",
-            subtitle: "gay man",
+            title: "here the name of template",
+            subtitle: "subtitle of template",
             item_url: "",
-            image_url: "https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/10888859_10203568739881141_4606943456520933747_n.jpg?oh=97bfef478a0ba16f92df2861171f4ece&oe=5981ECF7",
+            image_url: "",
             buttons: [{
               type: "web_url",
               url: "https://www.oculus.com/en-us/rift/",
@@ -149,19 +149,6 @@ function sendGenericMessage(recipientId, messageText) {
           }]
         }
       }
-    }
-  };
-
-  callSendAPI(messageData);
-}
-
-function sendChichiMessage(recipientId, messageText) {
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    message: {
-      text: 'chichico es el mas gay del Mundo'
     }
   };
 
